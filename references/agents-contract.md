@@ -35,15 +35,16 @@ Record only repository-level routing and durable Gates. For a repository using t
 ```text
 substantial planned development
 → approved BASELINE.md
+→ [material UI/UX → design-readiness]
 → implementation-planning
 → PLAN.md
 → one Stage at a time
-→ required verification and Gates
-→ acceptance
+→ required verification and PLAN-required Gates
+→ [PLAN requires Stage Acceptance → acceptance-review]
 → checkpoint
 ```
 
-Point to `delivery-baseline`, `implementation-planning`, `acceptance-review`, and built-in code review when applicable. Do not restate their algorithms.
+Point to `delivery-baseline`, `design-readiness` when applicable, `implementation-planning`, `acceptance-review` when the PLAN requires Stage Acceptance, and Code Review when the PLAN requires it. Do not restate their algorithms or bind Code Review to a product-specific feature, mode, or tool.
 
 ### Documentation Governance
 

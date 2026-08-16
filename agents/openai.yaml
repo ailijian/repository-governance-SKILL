@@ -1,7 +1,7 @@
 interface:
   display_name: "Repository Governance"
   short_description: "Audit and maintain durable repository agent guidance"
-  default_prompt: "Use $repository-governance to audit, bootstrap, evaluate, or minimally update repository-level AGENTS.md using current repository evidence and durable governance rules."
+  default_prompt: "Audit, bootstrap, evaluate, or minimally update repository-level AGENTS.md using current repository evidence and durable governance rules."
 
 policy:
   allow_implicit_invocation: false
