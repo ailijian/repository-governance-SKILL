@@ -18,7 +18,7 @@
 将下面的 Prompt 直接发送给 Codex，或其他支持原生 Skill 安装的 AI 编程工具。无需执行命令，也无需手工复制文件。
 
 ```text
-请安装位于 https://github.com/ailijian/repository-governance-SKILL.md 仓库根目录的 AI Agent Skill，并以 repository-governance 作为规范名称安装到我的用户级 Skills 目录。优先使用 $skill-installer 或你原生的 Skill 安装能力；不要安装到当前项目中。完整保留 SKILL.md、agents/openai.yaml 和 references/agents-contract.md。如果同名目标已经存在，先停止并询问我是否替换。安装后验证 Skill，并报告安装路径；如果你是 Codex，同时告诉我该 Skill 将从我的下一轮对话开始可用。
+请安装位于 https://github.com/ailijian/repository-governance-SKILL 仓库根目录的 AI Agent Skill，并以 repository-governance 作为规范名称安装到我的用户级 Skills 目录。在 Codex 中使用 $skill-installer，并安装到 $HOME/.agents/skills；其他产品使用其原生 Skill 安装能力。不要安装到当前项目中。完整保留 SKILL.md、agents/openai.yaml 和 references/agents-contract.md。如果同名目标已经存在，先停止并询问我是否替换。安装后验证 Skill 并报告路径。Codex 应自动检测新 Skill；如果没有出现，请重启 Codex。
 ```
 
 ## 使用示例

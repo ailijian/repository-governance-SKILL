@@ -18,7 +18,7 @@ The skill is intentionally not a general code-review, architecture-design, docum
 Copy the prompt below into Codex or another AI coding tool with native skill installation support. No shell commands or manual file copying are required.
 
 ```text
-Install the AI agent skill located at the repository root of https://github.com/ailijian/repository-governance-SKILL.md under the canonical name repository-governance in my user-level skills directory. Use $skill-installer or your native skill installer if available. Do not install it into the current project. Preserve SKILL.md, agents/openai.yaml, and references/agents-contract.md. If a destination with that name already exists, stop and ask before replacing it. Validate the installed skill and report its path; for Codex, also tell me that it will be available on my next turn.
+Install the AI agent skill located at the repository root of https://github.com/ailijian/repository-governance-SKILL under the canonical name repository-governance in my user-level skills directory. In Codex, use $skill-installer and install it under $HOME/.agents/skills; otherwise use the product's native skill installer. Do not install it into the current project. Preserve SKILL.md, agents/openai.yaml, and references/agents-contract.md. If a destination with that name already exists, stop and ask before replacing it. Validate the installed skill and report its path. Codex should detect the new skill automatically; if it does not appear, restart Codex.
 ```
 
 ## Example prompts
