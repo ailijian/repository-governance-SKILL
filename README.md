@@ -2,36 +2,58 @@
 
 [简体中文](README.zh-CN.md)
 
-Establish or audit repository AGENTS guidance, and apply explicitly authorized governance changes. Detailed operations, boundaries, and output rules belong to [SKILL.md](SKILL.md) and its [dedicated contract](references/agents-contract.md). Invoke it explicitly; `policy.allow_implicit_invocation` remains `false`.
+Establish or audit repository `AGENTS.md` guidance so durable engineering rules, knowledge entry points, and verification commands reflect repository reality.
 
-## Source and payload
+## When to use
 
-This independent repository is maintained at `skills/repository-governance/` within [ai_native_workflow](https://github.com/ailijian/ai_native_workflow). Its origin and Git history remain independent.
+- Create the necessary agent guidance for a new repository.
+- Audit stale rules, invalid commands, or temporary project state in existing AGENTS guidance.
+- Evaluate a proposed rule's owner or apply approved governance changes.
 
-The installable component files are:
+## Installation
+
+Give this prompt to Codex. Append a tag or commit to select a version; private repositories require access.
 
 ```text
-SKILL.md
-agents/openai.yaml
-references/agents-contract.md
+Install or update repository-governance for the current user from this repository:
+https://github.com/ailijian/repository-governance-SKILL.git
+Use my specified version; otherwise read the remote default branch and record the actual commit.
+Read SKILL.md, agents/openai.yaml, and references/ first. Check existing external dependencies and version compatibility.
+If dependencies are missing or incompatible, report the gaps and stop installation. Do not install other Skills or rewrite shared files automatically.
+When dependencies are ready, install only this Skill's SKILL.md, agents/, and references/ at $HOME/.agents/skills/repository-governance/, preserving structure and content.
+Leave identical content unchanged. Back up before updating; show conflicting local customizations and wait for my decision.
+Check the Skill name, allow_implicit_invocation: false, reference resolution, and host discovery. Report the installation path, commit, and verification results. Do not invoke this Skill during installation.
 ```
 
-README files, Git metadata, and local operating-system files are not Skill payload. LICENSE remains repository metadata governing this component.
+This version references public contracts and applicable related Skill contracts that are not included in this repository; compatible dependencies must already be available locally. Missing dependencies are reported before installation.
 
-## Dependencies and installation
+## Usage
 
-This checkout contains one component. Select a verified complete collection from the parent project's release records before ordinary adoption. Its public execution contract and manifest belong at `<agents-root>/workflow-contracts/`, alongside `<agents-root>/skills/`; referenced sibling contracts must also come from the selected collection. Do not silently combine separate repositories' latest versions.
+Explicitly select this Skill in the target project and use the prompts below. Clients supporting `$` invocation can use the complete examples. Replace `<…>` placeholders; do not repeat inputs already clear in context.
 
-Cloning this repository alone does not fetch the public package or install the workflow. A standalone checkout must obtain the required dependencies and installation instructions from the selected collection; it must not assume the parent project's directories exist beside it. The parent repository is private and requires access. If a required version or dependency is unavailable, report that specific gap; do not generate a replacement contract.
+### Audit existing guidance
 
-Use the selected collection's actual installation and recovery instructions. Resolve target roots for that machine, preserve existing user configuration, verify installed content and references, and record what actually became active. Updating this source does not update installed Skills or migrate existing Deliveries. Without a complete verified collection, this source is only suitable for explicitly scoped candidate inspection.
+```text
+$repository-governance
+Run Audit on this repository's root AGENTS.md.
+Check rules against current reality, inspect entry points and commands, and identify temporary Delivery state.
+Return findings and recommendations only.
+```
 
-## Maintenance
+### Create guidance for a new repository
 
-Edit the owning source and verify the affected component using the parent project's `docs/maintenance.md` and the selected contracts. Check payload identity, explicit-invocation configuration, references in a declared assembled layout, and affected behavior where needed. Keep validation outputs separate from source; do not add a permanent test for every migration check.
+```text
+$repository-governance
+Run Bootstrap / Normalize on <repository path> to create its root AGENTS.md.
+Repository purpose: <settled purpose>. Write only evidence-backed durable rules and existing entry points, then stop for my review.
+```
 
-The parent project records migration provenance and exact component combinations. A parent gitlink records a child commit only; pending working-tree changes need their own candidate identity and review before they can form a committed combination. Existing Git tags retain their historical meaning.
+Select one operation per request. `Evaluate Candidate` assesses a proposed rule's destination without writing; `Apply Approved Update` applies explicitly approved changes to the identified file. Repository-wide requests target the root AGENTS by default, without automatically editing nested guidance, global configuration, code, or CI.
 
-## License
+## Files and rules
 
-See [LICENSE](LICENSE).
+- [SKILL.md](SKILL.md): responsibilities and execution method.
+- [Dedicated contract](references/agents-contract.md): inputs, dependencies, outputs, and decision rules.
+- [agents/openai.yaml](agents/openai.yaml): invocation configuration; implicit invocation is disabled.
+
+See the [official Skill documentation](https://learn.chatgpt.com/docs/build-skills) for Codex installation locations and invocation. License: [LICENSE](LICENSE).
