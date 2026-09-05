@@ -1,42 +1,37 @@
-# Repository Governance Skill
+# repository-governance
 
-[中文说明](README.zh-CN.md)
+[简体中文](README.zh-CN.md)
 
-`repository-governance` is a Codex skill for maintaining high-signal, durable repository-level `AGENTS.md` guidance. It grounds every judgment in repository reality and keeps repository governance separate from global engineering principles, project documentation, workflow skills, Delivery baselines and plans, and deterministic test or CI enforcement.
+Establish or audit repository AGENTS guidance, and apply explicitly authorized governance changes. Detailed operations, boundaries, and output rules belong to [SKILL.md](SKILL.md) and its [dedicated contract](references/agents-contract.md). Invoke it explicitly; `policy.allow_implicit_invocation` remains `false`.
 
-## What it does
+## Source and payload
 
-- Bootstrap or normalize a repository-root `AGENTS.md` when explicitly requested.
-- Audit an existing guide without modifying files.
-- Evaluate whether a proposed rule belongs in `AGENTS.md` or another authority layer.
-- Apply only an explicitly approved, minimal governance update.
+This independent repository is maintained at `skills/repository-governance/` within [ai_native_workflow](https://github.com/ailijian/ai_native_workflow). Its origin and Git history remain independent.
 
-The skill is intentionally not a general code-review, architecture-design, documentation-maintenance, or Delivery-execution workflow.
-
-## Install with a prompt
-
-Copy the prompt below into Codex or another AI coding tool with native skill installation support. No shell commands or manual file copying are required.
+The installable component files are:
 
 ```text
-Install the AI agent skill located at the repository root of https://github.com/ailijian/repository-governance-SKILL under the canonical name repository-governance in my user-level skills directory. In Codex, use $skill-installer and install it under $HOME/.agents/skills; otherwise use the product's native skill installer. Do not install it into the current project. Preserve SKILL.md, agents/openai.yaml, and references/agents-contract.md. If a destination with that name already exists, stop and ask before replacing it. Validate the installed skill and report its path. Codex should detect the new skill automatically; if it does not appear, restart Codex.
+SKILL.md
+agents/openai.yaml
+references/agents-contract.md
 ```
 
-## Example prompts
+README files, Git metadata, and local operating-system files are not Skill payload. LICENSE remains repository metadata governing this component.
 
-```text
-Use $repository-governance to audit the repository-root AGENTS.md. Do not modify files. Return PASS if there is no material governance issue.
-```
+## Dependencies and installation
 
-```text
-Use $repository-governance to evaluate whether this candidate rule belongs in the repository AGENTS.md: <candidate rule>
-```
+This checkout contains one component. Select a verified complete collection from the parent project's release records before ordinary adoption. Its public execution contract and manifest belong at `<agents-root>/workflow-contracts/`, alongside `<agents-root>/skills/`; referenced sibling contracts must also come from the selected collection. Do not silently combine separate repositories' latest versions.
 
-## Package contents
+Cloning this repository alone does not fetch the public package or install the workflow. A standalone checkout must obtain the required dependencies and installation instructions from the selected collection; it must not assume the parent project's directories exist beside it. The parent repository is private and requires access. If a required version or dependency is unavailable, report that specific gap; do not generate a replacement contract.
 
-- `SKILL.md` — trigger definition, operating boundaries, and the four governance operations.
-- `references/agents-contract.md` — lean repository guide and exact output contracts.
-- `agents/openai.yaml` — Codex-facing display metadata and explicit-invocation policy.
+Use the selected collection's actual installation and recovery instructions. Resolve target roots for that machine, preserve existing user configuration, verify installed content and references, and record what actually became active. Updating this source does not update installed Skills or migrate existing Deliveries. Without a complete verified collection, this source is only suitable for explicitly scoped candidate inspection.
+
+## Maintenance
+
+Edit the owning source and verify the affected component using the parent project's `docs/maintenance.md` and the selected contracts. Check payload identity, explicit-invocation configuration, references in a declared assembled layout, and affected behavior where needed. Keep validation outputs separate from source; do not add a permanent test for every migration check.
+
+The parent project records migration provenance and exact component combinations. A parent gitlink records a child commit only; pending working-tree changes need their own candidate identity and review before they can form a committed combination. Existing Git tags retain their historical meaning.
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE).
+See [LICENSE](LICENSE).

@@ -2,6 +2,14 @@
 
 Use this contract to structure repository guidance and the outputs of `repository-governance`. Keep project facts out of this reference.
 
+## Method and handoff
+
+Identify the selected collection from the sibling public [manifest](../../../workflow-contracts/manifest.yaml), checking this entrypoint and dependencies actually used. Apply the public [source and evidence](../../../workflow-contracts/execution-contract.md#source-and-evidence) and [handoff](../../../workflow-contracts/execution-contract.md#handoff) rules to current inputs and upstream findings. Do not load every Skill or historical report.
+
+An explicitly selected partial candidate may be used for isolated calibration with its limits disclosed. Ordinary adoption requires the applicable complete release. For missing or mixed dependencies and old reports, use [version and recovery](../../../workflow-contracts/execution-contract.md#versions-and-recovery): retain the old method/source binding, recover necessary original content and block only dependent conclusions. Do not silently substitute current rules, install a package, migrate a Delivery or reissue another producer's verdict.
+
+Keep method identity, assessed input state, authorization and unresolved upstream obligations in the operation report or existing authorized record. They are not automatically durable repository guidance. Audit and Evaluate Candidate remain read-only; Bootstrap / Normalize and Apply may write only the explicitly authorized instruction target. This Skill never creates a receipt, checkpoint or Delivery record as an incidental handoff.
+
 ## 1. Lean Repo AGENTS framework
 
 Use only sections supported by repository reality. Rename or combine sections when that improves clarity. Omit empty sections.
@@ -44,7 +52,11 @@ substantial planned development
 → checkpoint
 ```
 
-Point to `delivery-baseline`, `design-readiness` when applicable, `implementation-planning`, `acceptance-review` when the PLAN requires Stage Acceptance, and Code Review when the PLAN requires it. Do not restate their algorithms or bind Code Review to a product-specific feature, mode, or tool.
+Point to `delivery-baseline`, `design-readiness` when applicable, `implementation-planning`, `code-review` when review is requested or required, and `acceptance-review` when the PLAN requires Stage Acceptance. In this AI-native workflow, code-review is the unified review entrypoint and reuses the verified native review method; an ordinary native review outside the workflow does not by itself satisfy a workflow Gate. Do not restate either review algorithm or bind review to a product-specific UI feature, mode, or tool.
+
+Navigate to the applicable public contract and actual release selection only when the repository adopts that protocol. Resolve references from the selected installed roots or existing repository navigation; do not copy a developer's absolute home path, embed temporary candidate directories, fabricate a release or require every small repository to adopt this workflow. Missing dependencies are an explicit obligation, not a reason to write links that pretend they are available.
+
+Preserve the low-risk direct path: ordinary local changes can proceed under existing authorization and risk-proportionate verification without mandatory BASELINE, PLAN, RECORD, matrix or new Gate. Use the public [engineering analysis](../../../workflow-contracts/execution-contract.md#engineering-analysis) for applicable risk escalation; risk, verification scope and required Gates are separate decisions. A small diff does not waive a real security, data, contract or cross-component obligation. Governance navigation does not select today's profile, perform review or advance a Stage.
 
 ### Documentation Governance
 
@@ -52,17 +64,27 @@ Use one long-lived owner for each material fact. Prefer update-before-create and
 
 Treat `BASELINE.md` plus `PLAN.md` as the normal new persistent artifacts for a substantial Delivery. Add another durable document only when its knowledge survives future Deliveries, lacks an existing owner, and cannot be derived reliably from a machine-readable source.
 
+Distinguish durable knowledge from the public contract's conditional [control record](../../../workflow-contracts/execution-contract.md#control). Reuse reliable, retrievable PR, CI or project records first. Only a substantial Delivery lacking an equivalent carrier and needing cross-Stage/session recovery calls for a thin RECORD.md through an authorized controller. Reference its existing location and Owner when relevant; do not create it during governance work, prescribe it for every bug or fill AGENTS with its findings, results and control history. Retain necessary evidence under [material lifecycle](../../../workflow-contracts/execution-contract.md#material-lifecycle); navigation cleanup does not authorize deleting its sole recovery source.
+
 Prefer generated views when Contract, Schema, code, or another machine source owns the truth. Treat archives, reviews, Gate evidence, and completed plans as history or evidence unless the knowledge map explicitly assigns current authority. Do not make documentation-tree reorganization an incidental cleanup.
 
 ### Contract, Data, and Security
 
 Include only repository-specific, durable, high-risk boundaries such as Contract ownership, authoritative writes, authorization, migration discipline, sensitive data, Secrets, trust boundaries, or server/client ownership. Omit generic security advice already governed globally.
 
+Keep detailed consumer identities, candidate compatibility, rollout and recovery responsibility with Contract/Release Owners. AGENTS may name those Owners and a few necessary boundaries, but should not duplicate a changing consumer/version matrix. Derive relationships from declared or observed authorized sources, not directory proximity.
+
 ### Testing and Commands
 
 State the durable test strategy and only canonical command entry points verified to exist. Do not invent missing commands for a new project.
 
 Use these default semantics when applicable: verify every material Stage; do not equate every Stage with a full suite; prefer targeted or affected checks; choose broader regression from risk, the current plan, an integration checkpoint, or final closure; allow Acceptance to reuse trustworthy evidence attributable to the current repository state.
+
+Navigate to actual targeted, affected and full mechanisms only where they exist and are appropriate. Testing/runner Owners own selection semantics; Testing/Verification Owners own durable protection, test consolidation and retirement, flaky/slow test handling and coverage gaps. A short repository-specific link or invariant can be useful; copying the full maintenance or evidence policy into AGENTS is not.
+
+Evaluate proposed test rules against the current Testing Owner and [verification-architecture](../../verification-architecture/SKILL.md) method. Equivalent tests may be consolidated while preserving their verification intent and distinct boundary protection; one finding does not require one permanent suite. Retries and quarantine are not passing evidence or permission to weaken critical protection. Route a capability/policy gap and its Owner without editing tests, quarantine or CI, inventing a command, or treating a proposed check as implemented. A corrected navigation line may explicitly state that the real capability is still missing.
+
+Keep the supported debug loop discoverable where repository-specific routing is needed: focused diagnosis, affected repair verification, then any originally required final broad check. Do not mandate full regression after every small fix. Cost and test lifecycle details remain with their Owners; no per-test metadata registry is required by this framework.
 
 ### Governance and Completion
 
@@ -124,6 +146,8 @@ For `FINDINGS`, list only material findings in descending impact. Give each find
 
 State unresolved authority conflicts and identify which governance conclusions remain blocked. Confirm that the Audit made no modifications.
 
+When findings came from another Specialist, retain the original ID, report and source association beside this audit's current observation and recommended Owner. State what remains unimplemented or unverified; do not rename the upstream result into a governance PASS or infer approval to apply it.
+
 ## 4. Governance Candidate Report contract
 
 Use this format:
@@ -154,6 +178,8 @@ Report:
 4. unresolved governance issues, or `None`;
 5. rules better placed in or additionally enforced by docs, a Skill, tests, CI, code, Global `AGENTS.md`, `BASELINE.md`, or `PLAN.md`; and
 6. verification performed, including path and command checks plus final diff inspection.
+
+Identify the selected method, actual input and authorization used. Distinguish a verified path/implementation from a command actually executed; do not run tests, builds, generators or services merely to validate a navigation update. Use direct object/content reads or Git queries prefixed with `git --no-optional-locks -c diff.autoRefreshIndex=false`; optional locks alone do not prevent every diff from refreshing index stat data. Compare the final state with the starting state and report unrelated concurrent changes without reverting them.
 
 Do not claim that a companion destination was updated unless it was separately authorized and actually changed.
 

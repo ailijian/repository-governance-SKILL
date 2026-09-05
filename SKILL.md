@@ -10,6 +10,8 @@ Govern the repository-level instructions an AI agent should retain across future
 
 Read [references/agents-contract.md](references/agents-contract.md) completely before performing any operation. Use it for the lean document structure, destination rules, report formats, and minimal-patch contract.
 
+Apply its method and handoff rules to identify the selected workflow and attributable inputs. Governance supplies concise navigation to applicable methods and actual capabilities; it does not copy their contracts or install a workflow.
+
 ## Preserve the responsibility layers
 
 Maintain this separation:
@@ -19,8 +21,10 @@ Global AGENTS.md = cross-project engineering principles
 Repo AGENTS.md   = durable repository rules, routing, and invariants
 docs / contracts / schema / code = durable project and machine facts
 Skills           = repeatable workflows
+public contract  = shared workflow method and handoff rules
 BASELINE.md       = current Delivery target
 PLAN.md           = current Delivery execution plan
+existing record  = attributable evidence and control history, conditionally RECORD.md
 tests / CI        = deterministic enforcement and evidence
 ```
 
@@ -59,6 +63,10 @@ Before making a judgment:
 6. Use current `BASELINE.md`, `PLAN.md`, reviews, archives, and evidence only to identify content that must remain Delivery-specific or historical. Do not treat them as durable authority by default.
 7. Record the evidence for every repository-specific rule retained, added, removed, redirected, or challenged.
 
+Identify relevant current content and working-tree state rather than relying on HEAD or an old audit alone. Use non-mutating inspection; disable optional Git locks and diff index auto-refresh when querying Git, and use direct content/object reads for preserved evidence. Verify a command's implementation and Owner, not just a string naming it; this operation does not require running the suite or creating its missing runner.
+
+Consume upstream Specialist findings with their original IDs, source, result and remaining obligations. Rechecking a missing path can establish current governance evidence; it does not close the upstream finding or reissue Verification, Knowledge, Review or Acceptance judgments. A finding or proposed destination is not approval to write.
+
 Prefer the narrowest authoritative source. Do not select between conflicting current authorities based only on date, filename, existing code, or historical behavior. Report a material conflict and block only the affected governance conclusion or update until the authority is resolved.
 
 For a new repository, proceed once its basic purpose and scope are known. Keep the initial guide small. Omit unknown Architecture, Domain, CI, Testing, and command guidance rather than inventing it.
@@ -75,6 +83,8 @@ Include a repository rule only when it is:
 - best represented in `AGENTS.md`, alone or together with a more authoritative or deterministic owner.
 
 Prefer broad durable ownership plus a knowledge-map reference over enumerating business entities or implementation details. Keep root guidance repository-wide. Leave domain-local guidance in the applicable closer instructions.
+
+Use the reference's Delivery and Testing rules for short, evidence-backed navigation to the selected public contract, code-review, existing records and actual canonical mechanisms. Keep low-risk direct work available. Route test maintenance policy, selection logic, compatibility and release details to their current Owners; do not turn each finding or useful local practice into another permanent AGENTS rule.
 
 Classify a governance candidate without asking the user to answer the qualification questions. Choose the primary decision from `AGENTS`, `DOCS`, `SKILL`, `TEST/CI`, `CODE`, `GLOBAL AGENTS`, `PLAN/BASELINE`, `NONE`, or `NEEDS CLARIFICATION`. Use `CODE` when the implementation is the proper durable owner. Add a companion destination only when another layer has a distinct supporting role, such as deterministic `TEST/CI` enforcement for a high-level `AGENTS` invariant.
 
@@ -124,6 +134,8 @@ Confirm that the user's authorization identifies the rule or approved audit find
 4. Preserve unrelated supported guidance and the existing organization when it remains sound.
 5. Remove only stale or duplicate text included in the approval.
 6. Re-read the result and inspect the diff for scope expansion.
+
+Bind the patch to the actual authorized rule or finding and preserved constraints. If changed evidence materially alters the approved meaning or target, resolve that part before writing; otherwise complete the existing authorization without requesting it again. A navigation correction cannot certify that a missing mechanism has been implemented or that an upstream obligation is closed.
 
 Do not rewrite the whole file for consistency, update a companion destination, or modify another fact source unless the user separately authorizes it.
 
