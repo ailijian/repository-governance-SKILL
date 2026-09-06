@@ -84,7 +84,7 @@ Include a repository rule only when it is:
 
 Prefer broad durable ownership plus a knowledge-map reference over enumerating business entities or implementation details. Keep root guidance repository-wide. Leave domain-local guidance in the applicable closer instructions.
 
-Use the reference's Delivery and Testing rules for short, evidence-backed navigation to the selected public contract, code-review, existing records and actual canonical mechanisms. Keep low-risk direct work available. Route test maintenance policy, selection logic, compatibility and release details to their current Owners; do not turn each finding or useful local practice into another permanent AGENTS rule.
+Use the reference's Delivery and Testing rules for short, evidence-backed navigation to the selected public contract, code-review, existing records and actual canonical mechanisms. Check [workflow navigation and control boundaries](references/agents-contract.md#workflow-navigation-and-control-boundaries) against actual adoption and authorization. Keep low-risk direct work available. Route test maintenance policy, selection logic, compatibility and release details to their current Owners; do not turn each finding or useful local practice into another permanent AGENTS rule.
 
 Classify a governance candidate without asking the user to answer the qualification questions. Choose the primary decision from `AGENTS`, `DOCS`, `SKILL`, `TEST/CI`, `CODE`, `GLOBAL AGENTS`, `PLAN/BASELINE`, `NONE`, or `NEEDS CLARIFICATION`. Use `CODE` when the implementation is the proper durable owner. Add a companion destination only when another layer has a distinct supporting role, such as deterministic `TEST/CI` enforcement for a high-level `AGENTS` invariant.
 
@@ -108,7 +108,8 @@ Do not delay Bootstrap until the repository has mature architecture or tooling. 
 
 Keep the operation read-only. Compare the current guide with repository reality and check for:
 
-- stale paths, commands, ownership, or invariants;
+- stale paths, commands, ownership, or invariants, including method navigation that no longer matches the adopted workflow;
+- stop or continuation clauses that conflate a worker/Specialist handoff, authorized within-Stage work, and Stage completion;
 - duplication of global principles, Skills, or authoritative docs;
 - Delivery-specific, Stage-specific, historical, or evidence content;
 - deterministic rules better enforced by code, tests, or CI;

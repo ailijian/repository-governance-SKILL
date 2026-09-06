@@ -58,6 +58,15 @@ Navigate to the applicable public contract and actual release selection only whe
 
 Preserve the low-risk direct path: ordinary local changes can proceed under existing authorization and risk-proportionate verification without mandatory BASELINE, PLAN, RECORD, matrix or new Gate. Use the public [engineering analysis](../../../workflow-contracts/execution-contract.md#engineering-analysis) for applicable risk escalation; risk, verification scope and required Gates are separate decisions. A small diff does not waive a real security, data, contract or cross-component obligation. Governance navigation does not select today's profile, perform review or advance a Stage.
 
+<a id="workflow-navigation-and-control-boundaries"></a>
+#### Workflow navigation and control boundaries
+
+Trace the route an agent would actually follow: adopted workflow and applicable Delivery binding → named method and available dependencies → responsible caller/producer → returned result and next owner. A familiar Skill name or an old navigation link does not prove this route is current. Distinguish stale navigation from a missing capability or an unresolved adoption decision; a newer installed collection alone does not migrate an existing Delivery.
+
+Check stop and continuation clauses by role and scope. A read-only Specialist returning its result and a worker handing off after self-verification can be correct; neither establishes that all authorized Stage work is finished. Where the caller already has authority to organize current-Stage repair, verification and independent review, navigation should lead to the public [within-Stage control](../../../workflow-contracts/execution-contract.md#within-stage-control) rules and the existing responsible owner. Do not silently remove an explicit user stop boundary or turn a governance update into automatic routing, cross-Stage execution or permission to write other resources.
+
+For a material mismatch, identify the exact clause, affected invocation/role, authoritative adoption or authorization basis, and smallest navigation correction. Keep operational findings and remaining review/evidence work in their existing task carrier. Correcting the link does not repair the runner, complete the review or close its upstream finding; route each remaining obligation to its owner without copying the control algorithm into AGENTS.
+
 ### Documentation Governance
 
 Use one long-lived owner for each material fact. Prefer update-before-create and references over duplication. Do not create per-Delivery or per-version copies of durable Product, Architecture, Domain, Contract, Security, Testing, or Design knowledge. Let Git retain history.
@@ -81,6 +90,8 @@ State the durable test strategy and only canonical command entry points verified
 Use these default semantics when applicable: verify every material Stage; do not equate every Stage with a full suite; prefer targeted or affected checks; choose broader regression from risk, the current plan, an integration checkpoint, or final closure; allow Acceptance to reuse trustworthy evidence attributable to the current repository state.
 
 Navigate to actual targeted, affected and full mechanisms only where they exist and are appropriate. Testing/runner Owners own selection semantics; Testing/Verification Owners own durable protection, test consolidation and retirement, flaky/slow test handling and coverage gaps. A short repository-specific link or invariant can be useful; copying the full maintenance or evidence policy into AGENTS is not.
+
+When a command has eligibility constraints, verify that the proposed navigation reaches the intended working-tree or release path. Check the real prerequisites rather than recommending a bypass or a nonexistent replacement command. Leave dependency design and behavior validation to the runner/Verification owner; preserve an explicit gap when the intended entry is not yet implemented.
 
 Evaluate proposed test rules against the current Testing Owner and [verification-architecture](../../verification-architecture/SKILL.md) method. Equivalent tests may be consolidated while preserving their verification intent and distinct boundary protection; one finding does not require one permanent suite. Retries and quarantine are not passing evidence or permission to weaken critical protection. Route a capability/policy gap and its Owner without editing tests, quarantine or CI, inventing a command, or treating a proposed check as implemented. A corrected navigation line may explicitly state that the real capability is still missing.
 
