@@ -71,6 +71,8 @@ Prefer the narrowest authoritative source. Do not select between conflicting cur
 
 For a new repository, proceed once its basic purpose and scope are known. Keep the initial guide small. Omit unknown Architecture, Domain, CI, Testing, and command guidance rather than inventing it.
 
+When documenting a project entry, check what the existing commands actually invoke. Distinguish focused checks, affected integration, the full suite and required CI. A wrapper that runs everything counts as a full run.
+
 For a mature repository, compare instructions against the knowledge map, authoritative documents, contracts, schema, code, scripts, and CI. Retain only rules supported by current evidence.
 
 ## Qualify durable guidance
